@@ -1,5 +1,5 @@
 """
-URL configuration for hello_django project.
+URL configuration for movie_manager project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.2/topics/http/urls/
@@ -16,9 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from hello_app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('hello/',views.print_hello), 
 ]
