@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create</title>
+</head>
+<body>
+{% extends 'blank_layout.html' %}
+    {% block content %}
+      <h1 class="title-common">Create</h1>
+    <div class="form-enter">
+      <form class="form" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label>Title: </label>
+        <br>
+        <input type="text" name="title" class="title">
+        <br>
+        <br>
+        <label>Year: </label>
+        <br>
+        <input type="number" name="year" class="year">
+        <br>
+        <br>
+        <label>summary: </label>
+        <br>
+        <input type="text" name="summary" class="summary">
+    
+        <button type="submit" class="btn">Create</button>
+      </form>
+    </div>
+    {% endblock content %}
+
+</body>
+</html>
+
+
