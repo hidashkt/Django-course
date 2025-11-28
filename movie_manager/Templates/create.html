@@ -12,19 +12,8 @@
     <div class="form-enter">
       <form class="form" method="post" enctype="multipart/form-data">
         {% csrf_token %}
-        <label>Title: </label>
-        <br>
-        <input type="text" name="title" class="title">
-        <br>
-        <br>
-        <label>Year: </label>
-        <br>
-        <input type="number" name="year" class="year">
-        <br>
-        <br>
-        <label>summary: </label>
-        <br>
-        <input type="text" name="summary" class="summary">
+        {{ form.as_p }}
+        
     
         <button type="submit" class="btn">Create</button>
       </form>
