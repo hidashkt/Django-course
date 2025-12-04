@@ -7,11 +7,13 @@ from django.shortcuts import redirect
 # Create your views here.
 
 def create(request):
-    form=MovieForm()
     if request.POST:
-         form=MovieForm(request.POST)
+         form=MovieForm(request.POST,request.FILES)
          if form.is_valid:
               form.save()
+         else:
+               print(form.errors)
+            
     else:
          form=MovieForm 
     return render(request,'create.html',{'form':form})
